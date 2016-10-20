@@ -3,6 +3,10 @@
 
 import 'dart:html';
 
+import 'package:path/path.dart' as p;
+
 void main() {
-  querySelector('#output').text = 'Your Dart app is running.';
+  querySelector('#output').text =
+      'Your Dart app is running at ${new DateTime.now()}. '
+      '${ p.join('a', 'b', 'c' )}';
 }
